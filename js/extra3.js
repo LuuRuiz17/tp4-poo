@@ -8,7 +8,7 @@ function filtrarPorGenero(arrayLibros, genero) {
 }
 
 function mostrarLibros(libros) {
-    document.writeln(`<div class = "container"><table class=" table table-responsive m-auto border border-1 border-dark mt-3">
+    document.writeln(`<table class=" table table-responsive m-auto border border-1 border-dark mt-3">
         <thead><tr>
             <th class="bg-primary-subtle border border-1 border-dark text-center">Título</th>
             <th class="bg-primary-subtle border border-1 border-dark text-center">Autor</th>
@@ -24,7 +24,7 @@ function mostrarLibros(libros) {
             <td class="border border-1 border-dark text-center px-2">${libros[i].genero}</td>
         </tr>`);
     }
-    document.writeln(`</tbody></table></div>`);
+    document.writeln(`</tbody></table>`);
 }
 
 function mostrarLibrosPorGenero(librosPorGenero, generoSolicitado) {
