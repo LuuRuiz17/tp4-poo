@@ -45,10 +45,10 @@ function findBestGrade(students) {
     }
 }
 
-function countGrades(students){
+function countGrades(students) {
     let maxNGrades = 0;
-    for(let i = 0; i < students.length; i++){
-        if(students[i].grades.length > maxNGrades){
+    for (let i = 0; i < students.length; i++) {
+        if (students[i].grades.length > maxNGrades) {
             maxNGrades = students[i].grades.length
         }
     }
@@ -92,21 +92,21 @@ for (let i = 0; i < students.length; i++) {
 
     for (let j = 0; j < countGrades(students); j++) {
         if (students[i].grades[j]) {
-            if(j != countGrades(students) - 1){
+            if (j != countGrades(students) - 1) {
                 document.writeln(`<td class="border-end border-dark text-center p-2">${students[i].grades[j]}</td>`);
-            }else{
+            } else {
                 document.writeln(`<td class="text-center p-2">${students[i].grades[j]}</td>`);
             }
         } else {
             document.writeln(`<td class="border-end border-dark text-center p-2"> - </td>`);
         }
     }
-    
+
 
     document.writeln(`</tr></table>`);
     document.writeln(`</td>`);
     document.writeln(`<td class="border-1 border-dark text-center">${findBestGrade(students)}</td>`);
-    document.writeln(`</tr>`); 
+    document.writeln(`</tr>`);
 }
 
 document.writeln(`</tbody></table>`);
